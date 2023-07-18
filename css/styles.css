@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+#head1 {
+    position: absolute;
+    top: 14%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+#head2{
+    margin: 2rem;
+    font-size: 3rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+#head3{
+    font-size: 1.3rem;
+    background-color: rgb(177, 207, 226);
+    padding: 3rem;
+}
