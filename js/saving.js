@@ -1,26 +1,37 @@
-// Get input elements
 var salaryInput = document.querySelector('input#salary');
 var goalInput = document.querySelector('input#exampleDataList');
 var costInput = document.querySelector('input#totalCost');
 var contributionInput = document.querySelector('input#contribution');
-var resultSpan = document.querySelector('h2 span');
+var resultSpan = document.getElementById('resultSpan');
+var selectedOptionText = document.getElementById('selectedOptionText');
 
-// Add event listener to calculate button
+// to goal input
+goalInput.addEventListener('input', function() {
+    selectedOptionText.textContent = goalInput.value;
+});
+
+
+// calculate button
 document.querySelector('button#calculateBtn').addEventListener('click', function() {
-    // Get user inputs
     var salary = parseFloat(salaryInput.value);
-    var goal = goalInput.value;
+    var goal = parseFloat(goalInput.value);
     var cost = parseFloat(costInput.value);
     var contribution = parseFloat(contributionInput.value);
+
+
+    
+    if (isNaN(salary) || isNaN(contribution)) {
+       showPopupMessage('Please enter valid numbers.')
+       return;
+    }
 
     // Calculate number of months to reach the goal
     var months = Math.ceil(cost / contribution);
 
     // Display the result
-    resultSpan.textContent = months + " months";
-    
-
+    showPopupMessage(`It will take you ${months} months to reach this goal`, "bold red");
 });
+
 
 
 

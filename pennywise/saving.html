@@ -11,95 +11,93 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #e9eef2;
+}
 
-        .container-fluid {
-            padding: 20px;
-        }
+.saving {
+    background-color: #78a6c8;;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
 
-        .saving {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+.saving h1 {
+    font-size: 24px;
+    color: #e9eef2;
+    padding-top: 200px;
+}
 
-        .saving h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
+.saving img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .saving img {
-            max-width: 100%;
-            height: auto;
-        }
+section#start {
+    background-color: #326789;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 500px;
+    color: #e9eef2;
+}
 
-        .icon {
-            margin-top: 20px;
-        }
+section#start h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-        .icon svg {
-            width: 80px;
-            height: 80px;
-            fill: currentColor;
-        }
+section#start label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #e9eef2;
+}
 
-        section#start {
-           
-        background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            padding-left: 500px;
-            
-           
-        }
+section#start input[type="number"],
+section#start input[type="text"],
+section#start input.form-control {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 50%;
+    background-color: #e9eef2;
+    color: #326789;
+}
 
-        section#start h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
+section#start h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #e9eef2;
+}
 
-        section#start label {
-            font-size: 16px;
-            color: #333;
-            display: block;
-            margin-bottom: 5px;
-        }
+section#start h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #e9eef2;
+}
 
-        section#start input[type="number"],
-        section#start input[type="text"],
-        section#start input.form-control {
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 2px solid black;
-            width: 50%;
-        }
+section#start a {
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+}
 
-        section#start h2 {
-            font-size: 20px;
-            color: #333;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+button#calculateBtn {
+    background-color:  #78a6c8;
+    color: #e9eef2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        section#start h3 {
-            font-size: 18px;
-            color: #333;
-            margin-top: 20px;
-        }
+button#calculateBtn:hover {
+    background-color: #97abbb;
+}
 
-        section#start a {
-            border:2px solid black;
-            text-decoration: none;
-            color:black;
-
-        }
     </style>
 </head>
 
@@ -108,10 +106,10 @@
         <div class="saving">
             <div class="container text-center">
                 <div class="row align-items-start">
-                    <div class="col">
+                    <div class="col-md-6">
                         <h1>Save with PENNYWISE, Never touch your savings</h1>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                         <img src="https://i.postimg.cc/FKXbgn9B/Saving-Money.jpg" alt="saving">
                     </div>
                 </div>
@@ -136,7 +134,7 @@
     <label for="exampleDataList" class="form-label">My goal is to save towards</label>
     <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
     <datalist id="datalistOptions">
-        <option value="gadgets">
+        <option value="gadget">
         <option value="holiday">
         <option value="gift">
         <option value="shopping">
@@ -144,7 +142,7 @@
     </datalist>
 </div>
 <div class="form-group">
-    <label for="totalCost">The total cost of .... is</label>
+    <label for="totalCost">The total cost for the <span id="selectedOptionText"></span> is</label>
     <input type="number" class="form-control" id="totalCost">
 </div>
 <div class="form-group">
@@ -152,7 +150,8 @@
     <input type="number" class="form-control" id="contribution">
 </div>
 <button id="calculateBtn">Calculate</button>
-<h1>It will take you <span id="resultSpan"></span> months to reach this goal.</h1>
+
+<h1><span id="resultSpan"></span></h1>
 
             <div class="form-group">
                 <label for="commitment">Are you committing to keep this agreement</label>
@@ -164,7 +163,7 @@
             </div>
             <div id="message"></div>
 
-            <h3>Learn more about savings and <a href="./faq.html">view our FAQ</a> </h3>
+            <h3>Learn more about savings and <a href="./contact.html">view our FAQ</a> </h3>
         </section>
     </div>
 
