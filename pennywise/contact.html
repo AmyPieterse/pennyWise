@@ -1,121 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/faq.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>faq</title>
-</head>
+    <title>Financial Service Web App FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="/css/faq.css">
 <body>
-    <div class="container">
-      <h1 class="text-center">Frequently Asked Questions</h1>
-  
-      <!-- Question Form -->
-      <div class="card mb-4">
-        <div class="card-header">
-          <h5 class="mb-0">Ask a Question</h5>
+    <div class="container mt-5">
+        <h1 class="text-center">Frequently Asked Questions</h1>
+        <div class="row" id="faqAccordion">
+            <!-- FAQ cards will be dynamically added here using JavaScript -->
         </div>
-        <div class="card-body">
-          <form>
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
-            </div>
-            <div class="form-group">
-              <label for="question">Question</label>
-              <textarea class="form-control" id="question" rows="3" placeholder="Enter your question"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+
+        <div class="mt-4">
+            <h3 class="mb-3">Ask a Question</h3>
+            <form id="faqForm">
+                <div class="form-group">
+                    <label for="questionInput">Your Question</label>
+                    <input type="text" class="form-control" id="questionInput" placeholder="Type your question here" required>
+                </div>
+                <div class="form-group">
+                    <label for="answerInput">Answer</label>
+                    <textarea class="form-control" id="answerInput" rows="3" placeholder="Type your answer here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Question</button>
+            </form>
         </div>
-      </div>
-  
-      <!-- FAQs Section -->
-      <div class="accordion" id="accordionExample">
-  
-        <!-- Question 1 -->
-        <div class="card">
-          <div class="card-header">
-            <h2 class="mb-0">
-               How can I start saving money?
-            </h2>
-          </div>
-  
-          <div>
-            <div class="card-body">
-              Answer: To start saving money, you can follow these steps: 
-            </div>
-          </div>
-        </div>
-  
-        <!-- Question 2 -->
-        <div class="card">
-            <div class="card-header">
-              <h2 class="mb-0">
-                How can I start saving money?
-              </h2>
-            </div>
-    
-            <div>
-              <div class="card-body">
-                Answer: To start saving money, you can follow these steps: 
-              </div>
-            </div>
-          </div>
-  
-        <!-- Question 3 -->
-        <div class="card">
-            <div class="card-header">
-              <h2 class="mb-0">
-                How can I start saving money?
-              </h2>
-            </div>
-                <!-- Question 4 -->
-            <div>
-              <div class="card-body">
-                Answer: To start saving money, you can follow these steps: 
-              </div>
-            </div>
-          </div>
-  
-  
-      </div>
     </div>
 
-    <!-- <div class="footer">
-      <div class="container">
-        <div>
-          <h4>Get freshest penniwise news</h4>
-          <form action="#" method="POST">
-           <input type="text" placeholder="your email here">
-            <button class="btn btn-primary" type="submit">Subscribe</button>
-          </form>
-        </div>
-        <div class="socaills">
-          <h4>Follow Us</h4>
-          <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p class="year"> &2023 all rights reserved</p>
-        <hr>
-        <hr>
-        <div class="legalities">
-
-        </div>
-      </div> -->
-
-    
-    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    <script src="/js/contact.js"></script>
 </body>
+
 </html>
-
-
-
-
