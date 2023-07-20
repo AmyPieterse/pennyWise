@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+body{
+    background-image: url(https://i.postimg.cc/pd0ZJ5G0/istockphoto-1279341226-612x612.jpg);
+    display: flex;
+}
+.sidebar{
+    background-color:black;
+    height: 100vh;
+    width: 15rem;
+}
+.logo img{
+    width: 50px;
+}
+.logo span{
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+}
+.user img{
+    width: 80px;
+    border-radius: 100%;
+}
+.main li{
+    list-style: none;
+}
+.main a{
+    color: white;
+    text-decoration: none;
+}
+.budgetContainer{
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
+}
+.container{
+    width: 100%;
+}
+.subcontainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flexSpace{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.budgetContainer h3{
+    color: #363d55;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+.container input{
+    display: block;
+    width: 100%;
+    padding: 0.6em;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+.container{
+    border-color: #449342;
+}
+.totalAmountContainer,
+.userAmountContainer{
+    background-color: #ffffff;
+    padding: 1.25em 0.9em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.2em 0.8em rgba(26,0.6,0.04);
+}
+.outputContainer{
+    background-color: #449342;
+    color: #ffffff;
+    border-radius: 0.3em;
+    box-shadow: 0 0.2em 0.8em rgba(26,0.6,0.04);
+    font-weight: 500;
+    margin: 2em 0;
+    padding: 1.2em;
+}
+.outputContainer p{
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+.outputContainer span{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #e5e5e5;
+}
+.submit{
+    font-size: 1em;
+    margin-top: 0.6em;
+    background-color: #449342; 
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0.6em 1.2em;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.list{
+    background-color: #ffffff;
+    padding: 1.8em 1.2em;
+    box-shadow: 0 0.2em 0.8em rgba(26,0.6,0.04);
+    border-radius: 0.6em;
+}
+.hide{
+    display: none;
+}
+.error{
+    color: #ff465a;
+}
+.sublistContent{
+    width: 100%;
+    border-left: 0.3em solid #449342;
+    margin-bottom: 0.6em;
+    padding: 0.5em 0;
+}
+.product{
+    font-weight: 500;
+    margin-left: 1.5em;
+    color:#363d55;
+}
+.amount{
+    color: #414a67;
+    margin-left: 20%;
+}
+.iconsContainer{
+    width: 5em;
+    margin: 1.2em;
+    align-items: center;
+}
+.productTitle{
+    margin-bottom:1em;
+}
+.edit{
+    margin-left: auto;
+}
+.edit,.delete{
+    background:transparent;
+    cursor: pointer;
+    margin-right: 1.5em;
+    border: none;
+    color: #449342;
+}
+@media screen and (max-width:600px){
+    .budgetContainer{
+        font-size: 14px;
+    }
+    .subcontainer{
+        grid-template-columns: 1fr;
+    }
+}
